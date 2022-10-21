@@ -1,0 +1,22 @@
+# CSCI5611-HW1
+<p>John Cullom - cullo006@umn.edu</p>
+<a href="./src/JohnCullomCode.zip" download>Download Code Zip File</a>
+<p></p>
+<h2>Cloth Simulation</h2>
+<img height=400 width="auto" src="./images/clothgif.gif">
+<p>For the cloth simulation I created a 3D simulation of a cloth falling over a ball and deforming. It's slower
+    than realtime and doesn't bounce as well as the in-class python example did, and I'm not sure why. I tried everything;
+    smaller and larger k's with smaller and larger gravities, changing the restlen, changing the number of nodes; and nothing
+    made the cloth bouncier. Because of this, I didn't implement drag because I felt it would only make the simulation less
+    realistic or slower. I implemented a camera, directional and ambient lighting, and normals to create a 3D render. The normals are done correctly with cross products,
+    but the triangles of the cloth still have edges in the simulation. 
+</p>
+
+<p>I only used the processing library for this part of the project. I mostly ran into problems with translating the python
+    code from lecture into processing so that it worked. The fact that processing y is flipped (negative is upwards) threw me off for
+    both the cloth simulation and the shallow water equation simulation. A problem I wasn't able to figure out was the cloth elasticity and
+    bendiness. I couldn't get it to fall accurately, especially as it reached the vertical plane. It slows down and stops before it crosses the plane
+    instead of hitting the bottom with full velocity and bending. I looked through the algorithm many times and could not find a solution to fix
+    this. I did not add user interaction, ripping, or air drag. I had a very busy week preparing for three exams and couldn't make any progress
+    on fixing the falling speed issue since Monday.
+</p>
