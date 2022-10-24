@@ -22,4 +22,14 @@
 </p>
 
 <h2>Shallow Water</h2>
-<p>In progress: 1D shallow water simulation</p>
+<img height=400 width="auto" src="./images/watergif.gif">
+<p>I created a shallow water equation simulation based on the pseudocode we learned in class. The simulation has 30 boxes that change
+    height based on the equation, using midpoint helpers and eulerian integration to find the next values for each i. The endpoints of the
+    simulation use reflective boundary conditions, making the simulation more stable. I colored each of the rectangles based on the height, 
+    with the taller boxes getting a deeper blue color. I used only processing libraries for this code.
+</p>
+<p>The largest struggle with this part of the project was getting the simulation to be in any way stable. The fact that "up" in processing is actually
+    negative y made a few things difficult to figure out initially. Also, I noticed that after 20 seconds or so the simulation would become unstable and 
+    explode, so I had to add code at the start of each loop that changed each hu[i] value to itself % 100. The values were getting so large that the simulation
+    was breaking, so "normalizing" the array fixed the problem at some expense of realistic water flow.
+</p>
